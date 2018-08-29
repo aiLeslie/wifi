@@ -14,7 +14,7 @@ import java.util.Map;
 public class Database extends AbstractDatabase<MapView.Object> {
     private static Database _instance;
     private List<Car> cars = new ArrayList<>();
-    public HashMap<Area, Car> areaMap = new HashMap<>();
+    private HashMap<Area, Car> areaMap = new HashMap<>();
 
 
 
@@ -30,6 +30,7 @@ public class Database extends AbstractDatabase<MapView.Object> {
      */
     @Override
     public void initBase() {
+        areaMap = new HashMap<>();
 
         Area area = new Area("1", (ParkingLotData.TOP_IN_MIN_X - ParkingLot.offsetX + ParkingLotData.ROAD_HORIZOTAL_LENGTH / 6) * ParkingLot.scale, (ParkingLotData.LEFT_IN_MIN_Y - ParkingLot.offsetY + ParkingLotData.ROAD_VERTICAL_LENGTH / 3) * ParkingLot.scale, 250 * ParkingLot.scale, 400 * ParkingLot.scale);
         updataList(area, ADD_DATA);

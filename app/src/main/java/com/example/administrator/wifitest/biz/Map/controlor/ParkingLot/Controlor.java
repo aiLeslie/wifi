@@ -38,7 +38,7 @@ public class Controlor {
     public void initCars() {
         Random random = new Random();
 
-        Car car = new Car("兰博基尼", activityWR.get().getResources(), R.drawable.white_car).setWidthAndLength(300, 200).setX(random.nextInt(1000)).setY(random.nextInt(1000));
+        Car car = new Car("兰博基尼", activityWR.get().getResources(), R.drawable.white_car).setWidthAndLength(150, 270).setX(random.nextInt(1000)).setY(random.nextInt(1000));
 //        Car car = new Car("兰博基尼", activityWR.get().getResources(), R.drawable.white_car).setWidthAndLength(200, 100).setOrientation(90).setX(ParkingLotData.RIGHT_IN_MIN_X + 600).setY(ParkingLotData.RIGHT_IN_MIN_Y + 200);
         database.addCar(car);
     }

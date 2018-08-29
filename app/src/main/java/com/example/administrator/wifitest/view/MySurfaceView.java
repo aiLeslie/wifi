@@ -63,8 +63,12 @@ public abstract class MySurfaceView extends SurfaceView implements SurfaceHolder
                         if (drawable != null && isUpdate) {
 
                             drawing();
+
                             // sufaceView已经被销毁
                             if (canvas == null) return;
+
+
+
                         }
 
                         sleep(interval);
@@ -100,7 +104,7 @@ public abstract class MySurfaceView extends SurfaceView implements SurfaceHolder
         canvas = surfaceHolder.lockCanvas();
         if (canvas == null) return;
         // 清空画布
-//        clearCanvas();
+        clearCanvas();
         drawable.ondraw();
         surfaceHolder.unlockCanvasAndPost(canvas);
     }
