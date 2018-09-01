@@ -485,14 +485,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //申请权限
+        requestPermission();
+
         // 开启打开动画
         PictureResource pr = new PictureResource(this, R.id.main);
         pr.openingAnimation();
 
         isRun = true;
 
-        //申请权限
-        requestPermission();
         // 得到wifiManage的实例
         wifiManager = (WifiManager) this.getApplicationContext().getSystemService(Context.WIFI_SERVICE);
         /// 初始化控件
